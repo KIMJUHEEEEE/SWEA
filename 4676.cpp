@@ -40,6 +40,5 @@ int main() {
 		}
 		
 		cout << "#" << i << ' ' << ans << endl;
-
 	}
 }
