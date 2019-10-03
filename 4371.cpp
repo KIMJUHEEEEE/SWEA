@@ -1,8 +1,4 @@
 #include<iostream>
-#include<string.h>
-#include<cmath>
-#include<vector>
-#include<algorithm>
 using namespace std;
 
 int main() {
