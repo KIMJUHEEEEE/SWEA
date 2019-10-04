@@ -1,37 +1,50 @@
-#include <stdio.h>
-#include <memory.h>
-int arr[1005][1005];
-int main(void)
-{
-	int T;
-	scanf("%d", &T);
-	for (int test_case = 1; test_case <= T; test_case++)
+#include<iostream>
+#include<cmath>
+#include<vector>
+#include<string>
+using namespace std;
+int main() {
+	int t = 0;
+	cin>>t;		
+	for (int i = 1; i <= t; i++)
 	{
-		int n, m;
-		scanf("%d%d", &n, &m);
-
-		memset(arr, 0, sizeof(arr));
-
-		for (int i = 0; i < n; i++)
+		int w, h, n;
+		cin >> w >> h >> n;
+		vector<pair<int, int>> arr;
+		for(int i = 0; i < n; i++)
 		{
-			for (int j = 0; j < m; j++)
+			int x, y;
+			cin >> x >> y;
+			arr.push_back(pair<int, int>(x, y));
+		}
+		int ans = 0;
+		for (int i = 1; i < n; i++)
+		{
+			int n1, m1;
+			n1 = arr[i].first - arr[i - 1].first;
+			m1 = arr[i].second - arr[i - 1].second;
+			if (m1*n1 < 0)
 			{
-				if (arr[i][j] == 0)
-				{//콩이 심어져있으면, 오른쪽, 아래를 탐색해서 거리가 2인곳의 콩을 없앤다.
-					arr[i + 2][j] = 1;
-					arr[i][j + 2] = 1;
+				ans += abs(m1) + abs(n1);
+				continue;
+			}
+			else
+			{
+				n1 = abs(n1); m1 = abs(m1);
+				if (n1 <= m1)
+				{
+					ans += n1;
+					m1 -= n1; n1 = 0;
+					ans += m1;
+				}
+				else
+				{
+					ans += m1;
+					n1 -= m1; m1 = 0;
+					ans += n1;
 				}
 			}
 		}
-		int cnt = 0;
-		for (int i = 0; i < n; i++)
-		{
-			for (int j = 0; j < m; j++)
-			{
-				if (arr[i][j] == 0)
-					cnt++;
-			}
-		}
-		printf("#%d %d\n", test_case, cnt);
+		cout << '#'<<i<<' '<<ans<<endl;
 	}
 }
