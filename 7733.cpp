@@ -23,7 +23,6 @@ int main() {
 	for (int i = 1; i <= t; i++)
 	{
 		int n;
-
 		cin >> n;
 		int arm = 0; int arn = 999;
 		for (int i = 1; i <= n; i++)
