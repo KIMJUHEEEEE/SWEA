@@ -15,6 +15,5 @@ int main() {
 			ans += toupper(a[0]);
 		}
 		cout << '#' << i << ' ' << ans << endl;
-	}
-	
+	}	
 }
