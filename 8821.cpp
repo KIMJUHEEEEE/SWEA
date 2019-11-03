@@ -5,7 +5,6 @@ using namespace std;
 int main() {
 	int tc = 0;
 	cin >> tc;
-
 	for (int i = 1; i <= tc; i++)
 	{	int arr[10] = { 0, };
 		string a;
