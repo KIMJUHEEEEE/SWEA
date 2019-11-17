@@ -1,6 +1,5 @@
 #include<iostream>
 #include<vector>
-
 using namespace std;
 vector<long long int> v;
 
@@ -25,5 +24,4 @@ int main() {
 		cin >> l;
 		cout << '#' << i << ' ' << v[l] << endl;
 	}
-
 }
