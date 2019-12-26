@@ -1,6 +1,5 @@
 #include<iostream>
 #include<algorithm>
-#include<vector>
 using namespace std;
 
 pair<long long, long long> v[1000001];
