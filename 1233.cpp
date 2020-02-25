@@ -10,7 +10,7 @@ int main() {
 	{
 		int n = 0;
 		cin >> n;
-		bool ans = 0;
+		bool ans = 1;
 		int node[204] = { 0, };
 		int q = 1;
 		for (int i = 1; i <= n; i++)
@@ -30,21 +30,22 @@ int main() {
 			{
 				if (node[i] != '+' && node[i] != '-' && node[i] != '/' && node[i] != '*')
 				{
-					ans = 1;
+					ans = 0;
 					cout << ans << endl;
 					break;
 				}
 			}
 			else {
-				if (node[i] < '0' || node[i] > '9')
+				if (node[i] == '+' && node[i] == '-' && node[i] == '/' && node[i] == '*')
 				{
-					ans = 1;
+					ans = 0;
 					cout << ans << endl;
 					break;
 				}
 			}
-
-		}
+		} 
+        if(ans==1)
+                	cout<<ans<<endl;
 	}
 	return 0;
 }
