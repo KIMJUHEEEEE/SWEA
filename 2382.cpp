@@ -9,7 +9,6 @@ int map[101][101];
 int sum;
 queue<pair<pair<pair<int, int>, int>, int>> q;
 vector<pair<pair<pair<int, int>, int>, int>> v;
-//1,2,3,4=╩С,го,аб,©Л
 void sort()
 {
 	for (int i = 0; i < v.size() - 1; i++)
