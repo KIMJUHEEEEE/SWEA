@@ -50,8 +50,8 @@ void solve(int i, int j)
 		}
 		num++;
 	}
-
 }
+
 int main()
 {
 	for (int i = 1; i <= 21; i++)
