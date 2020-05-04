@@ -6,7 +6,7 @@ using namespace std;
 int n;
 int map[17][17];
 int visit[17];
-int mini = 99999;
+int mini;
 int count()
 {
 	int a=0;
